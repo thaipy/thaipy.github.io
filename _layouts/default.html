@@ -140,7 +140,7 @@
                   output_year = f"{next_date.strftime('%a %b %d')}"
                   Element("newdate").write(output_year)
                   while True:
-                      td = relativedelta(next_date, now)
+                      td = relativedelta(next_date, dt.now().astimezone())
                       Element("showtime").write("- in " + humanise_timedelta(td))
                       Element("title").write(next_event)
   
