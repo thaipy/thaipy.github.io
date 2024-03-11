@@ -14,6 +14,8 @@ Organisers: Dylan Jay, Audchadaporn Lertchanvit, Vincent Casagrande, François W
 
 To join our group, visit [our page on Meetup.com](https://www.meetup.com/thaipy-bangkok-python-meetup/).
 
+Join [Thailand developer discord](https://discord.gg/9rgY6JBm) or our the [Thapy facebook group](https://www.facebook.com/groups/458543967627125) to join the discussion.
+
 ### Sponsorship
 
 [Tech@Agoda](https://www.meetup.com/techatagoda/) is currently the Venue, Pizza and beer sponsor. 
@@ -21,7 +23,7 @@ Help us by [signing up to their events](https://forms.office.com/r/zASWwAf4Fg). 
 
 [Pizza Mania](https://www.pizzamania.co.th) provides us delicious pizza (and a helpful discount).
 
-If you are interested in sponsoring after party beers, get in touch.
+If you are interested in sponsoring ThaiPy in the future, look at the [ThaiPy Sponsorship Prospectus](https://docs.google.com/presentation/d/1BQH-brM8YstpQ4g3MCNbFHwGSZBry39BXTSQ4X6rQQQ/edit?usp=sharing) and get in touch.
 
 ### Code of Conduct
 We have a [code of conduct](/coc) we require all members of the ThaiPy community to adhere to.
@@ -32,7 +34,9 @@ If you feel ill, stay home or mask up and test.
 
 ### Topics, Decks, and Notes
 
-To propose a topic for a future event, just [open a discussion](https://github.com/thaipy/meetups/discussions) and we'll see if it fits on our calendar. Slide decks and notes from past events can also be found at our [meetup repo](https://github.com/thaipy/meetups/).
+To propose a topic for a future event, just [open a discussion](https://github.com/thaipy/meetups/discussions) and we'll see if it fits on our calendar. 
+
+Slide decks and notes from past events can also be found at our [meetup repo](https://github.com/thaipy/meetups/) or in the comments of [past thaipy events](https://www.meetup.com/thaipy-bangkok-python-meetup/events/?type=past)
 
 ### PyCon Thailand
 
@@ -40,4 +44,4 @@ To propose a topic for a future event, just [open a discussion](https://github.c
 
 ### Codewar
 
-We try to organise [CodeWar](./codewar) event's once per year as way to bring different development communities in bangkok togeather.
+We help organise [CodeWars](https://codewars.info) event's once per year as way to bring different development communities in bangkok togeather.
