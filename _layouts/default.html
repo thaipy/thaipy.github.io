@@ -59,7 +59,13 @@
         {% endif %}
 
         <h2>Next meetup</h2>
-        <p><strong><span id="newdate">Every 3rd Thursday</span> <span id="title"></span> <span id="showtime"></span></strong> - 
+        <p>
+          <strong>
+            <span id="newdate">Every 3rd Thursday</span>
+            <span id="title"></span>
+            <span id="showtime"></span>
+          </strong>
+          - 
           <a href="https://www.meetup.com/thaipy-bangkok-python-meetup/">Join Us</a>
           <a href="https://www.meetup.com/thaipy-bangkok-python-meetup/">RSVP</a>
         </p>
@@ -110,27 +116,32 @@
                       next_date = calendar.Calendar(3).monthdatescalendar(now.year, now.month+1)[3][0]
                   return (dt(next_date.year, next_date.month, next_date.day, 18, 30, 0, tzinfo=datetime.timezone(datetime.timedelta(hours=7))), "")
 
+              def humanise_timedelta(td):
+                  time_arr = []
+                  if td.months:
+                      time_arr.append(f"{td.months} month{'' if td.months == 1 else 's'}")
+                  if td.days:
+                      time_arr.append(f"{td.days} day{'' if td.days == 1 else 's'}")
+                  if td.hours:
+                      time_arr.append(f"{td.hours} hour{'' if td.hours == 1 else 's'}")
+                  if td.minutes:
+                      time_arr.append(f"{td.minutes} minute{'' if td.minutes == 1 else 's'}")
+                  if td.seconds:
+                      time_arr.append(f"{td.seconds} second{'' if td.seconds == 1 else 's'}")
+                  return " ".join(time_arr)
+
               async def main():
                   try:
-                    next_date, next_event = await get_next_event()
+                      next_date, next_event = await get_next_event()
                   except Exception as e:
-                    console.log(str(e))
-                    next_date, next_event = await get_next_repeat()
+                      console.log(str(e))
+                      next_date, next_event = await get_next_repeat()
                   
                   output_year = f"{next_date.strftime('%a %b %d')}"
                   Element("newdate").write(output_year)
                   while True:
-                      td = relativedelta(next_date, now)
-  
-                      output = (
-                          "- in "
-                          #f"{td.months} month{'' if td.months == 1 else 's'} "
-                          f"{td.days} day{'' if td.days == 1 else 's'} "
-                          f"{td.hours} hour{'' if td.hours == 1 else 's'} "
-                          f"{td.minutes} minute{'' if td.minutes == 1 else 's'} "
-                          f"{td.seconds} second{'' if td.seconds == 1 else 's'}"
-                      )
-                      Element("showtime").write(output)
+                      td = relativedelta(next_date, dt.now().astimezone())
+                      Element("showtime").write("- in " + humanise_timedelta(td))
                       Element("title").write(next_event)
   
                       await asyncio.sleep(1)
