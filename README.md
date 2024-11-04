@@ -8,22 +8,23 @@ This is for anyone who appreciates beauty and productivity in code.
 
 Follow us on Facebook [@bangkokpython](https://www.facebook.com/bangkokpython).
 
-Organisers: Dylan Jay, Audchadaporn Lertchanvit, Vincent Casagrande, François Wautier, Andrew Purser
+Organisers: Dylan Jay, Devin and Pao
 
 ### Joining the group
 
 To join our group, visit [our page on Meetup.com](https://www.meetup.com/thaipy-bangkok-python-meetup/).
 
-Join [Thailand developer discord](https://discord.gg/9rgY6JBm) or our the [Thapy facebook group](https://www.facebook.com/groups/458543967627125) to join the discussion.
+Join [Thailand developer discord](https://discord.gg/9rgY6JBm) or our the [Thapy facebook group](https://www.facebook.com/groups/458543967627125) to join the discussion
+or talk to us via [LINE](https://lin.ee/y01pvKl)
 
 ### Sponsorship
 
-[Tech@Agoda](https://www.meetup.com/techatagoda/) is currently the Venue, Pizza and beer sponsor. 
-Help us by [signing up to their events](https://forms.office.com/r/zASWwAf4Fg). Every [signup](https://forms.office.com/r/zASWwAf4Fg) helps.
+[Honest Technologies](https://www.linkedin.com/company/honestbank/) is currently the Venue, Pizza and beer sponsor. They are always looking for Data Science developers.
 
 [Pizza Mania](https://www.pizzamania.co.th) provides us delicious pizza (and a helpful discount).
 
-If you are interested in sponsoring ThaiPy in the future, look at the [ThaiPy Sponsorship Prospectus](https://docs.google.com/presentation/d/1BQH-brM8YstpQ4g3MCNbFHwGSZBry39BXTSQ4X6rQQQ/edit?usp=sharing) and get in touch.
+If you are interested in sponsoring ThaiPy in the future, look at the [ThaiPy Sponsorship Prospectus](https://docs.google.com/presentation/d/1BQH-brM8YstpQ4g3MCNbFHwGSZBry39BXTSQ4X6rQQQ/edit?usp=sharing) and get in touch
+via [LINE](https://lin.ee/y01pvKl)
 
 ### Code of Conduct
 We have a [code of conduct](/coc) we require all members of the ThaiPy community to adhere to.
@@ -34,7 +35,7 @@ If you feel ill, stay home or mask up and test.
 
 ### Topics, Decks, and Notes
 
-To propose a topic for a future event, just [open a discussion](https://github.com/thaipy/meetups/discussions) and we'll see if it fits on our calendar. 
+To propose a topic for a future event, contact us via [LINE](https://lin.ee/y01pvKl) and we can discuss what would be a suitable topic.
 
 Slide decks and notes from past events can also be found at our [meetup repo](https://github.com/thaipy/meetups/) or in the comments of [past thaipy events](https://www.meetup.com/thaipy-bangkok-python-meetup/events/?type=past)
 
