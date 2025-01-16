@@ -98,9 +98,13 @@
               now = dt.now().astimezone()
 
               async def get_next_event():
-                  #cal = await pyfetch("https://www.meetup.com/thaipy-bangkok-python-meetup/events/ical/")
-                  with open("meetup.ical") as f:
-                      cal = f.read()
+                  CORS_PROXY = "https://corsproxy.io/?" 
+                  # page = await pyfetch(CORS_PROXY+"https://openrss.org/www.meetup.com/thaipy-bangkok-python-meetup/events/", 
+                  #                    headers={"Accept": "application/rss+xml"}, mode="no-cors")
+                  url = CORS_PROXY+"https://www.meetup.com/thaipy-bangkok-python-meetup/events/ical/"
+                  cal = await pyfetch(pyfetch(url, mode="cors"))
+                  # with open("meetup.ical") as f:
+                  #    cal = f.read()
                   cal = icalendar.Calendar.from_ical(cal)
                   for event in calendar.walk('VEVENT')
                       if event.start &gt; now:
