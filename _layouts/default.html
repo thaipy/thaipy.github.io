@@ -88,7 +88,7 @@
               import json
               from dateutil.relativedelta import relativedelta
               from dateutil.parser import parse
-              from pyodide.http import pyfetch
+              from pyscript import fetch
               from js import console
               import datetime, icalendar
 
@@ -99,10 +99,14 @@
                   # page = await pyfetch(CORS_PROXY+"https://openrss.org/www.meetup.com/thaipy-bangkok-python-meetup/events/", 
                   #                    headers={"Accept": "application/rss+xml"}, mode="no-cors")
                   url = CORS_PROXY+"https://www.meetup.com/thaipy-bangkok-python-meetup/events/ical/"
-                  cal = await pyfetch(pyfetch(url, mode="cors"))
+                  response = await fetch(pyfetch(url, mode="cors"))
+                  if response.ok:
+                    data = await response.text()
+                  else:
+                    return None, "Unknown"
                   # with open("meetup.ical") as f:
                   #    cal = f.read()
-                  cal = icalendar.Calendar.from_ical(cal)
+                  cal = icalendar.Calendar.from_ical(data)
                   for event in calendar.walk('VEVENT'):
                       if event.start > now:
                           nextdate = event.get('dtstart').dt
