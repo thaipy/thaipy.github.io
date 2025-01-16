@@ -89,6 +89,7 @@
               from dateutil.relativedelta import relativedelta
               from dateutil.parser import parse
               from js import console
+              from pyodide.http import pyfetch
               import datetime, icalendar
 
               now = dt.now().astimezone()
@@ -98,7 +99,7 @@
                   # page = await pyfetch(CORS_PROXY+"https://openrss.org/www.meetup.com/thaipy-bangkok-python-meetup/events/", 
                   #                    headers={"Accept": "application/rss+xml"}, mode="no-cors")
                   url = CORS_PROXY+"https://www.meetup.com/thaipy-bangkok-python-meetup/events/ical/"
-                  response = await fetch(pyfetch(url, mode="cors"))
+                  response = await pyfetch(pyfetch(url, mode="cors"))
                   if response.ok:
                     data = await response.text()
                   else:
