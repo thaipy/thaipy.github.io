@@ -104,7 +104,7 @@
                   #    cal = f.read()
                   cal = icalendar.Calendar.from_ical(cal)
                   for event in calendar.walk('VEVENT'):
-                      if event.start &gt; now:
+                      if event.start > now:
                           nextdate = event.get('dtstart').dt
                           return nextdate, event.get('summary')
 
