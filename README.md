@@ -19,11 +19,7 @@ or talk to us via [LINE](https://lin.ee/y01pvKl)
 
 ### Sponsorship
 
-[Honest Technologies](https://www.linkedin.com/company/honestbank/) is currently the Venue, Pizza and beer sponsor. They are always looking for Data Science developers.
-
-[Pizza Mania](https://www.pizzamania.co.th) provides us delicious pizza (and a helpful discount).
-
-If you are interested in sponsoring ThaiPy in the future, look at the [ThaiPy Sponsorship Prospectus](https://docs.google.com/presentation/d/1BQH-brM8YstpQ4g3MCNbFHwGSZBry39BXTSQ4X6rQQQ/edit?usp=sharing) and get in touch
+We are looking for sponsors! If you are interested in sponsoring ThaiPy, look at the [ThaiPy Sponsorship Prospectus](https://docs.google.com/presentation/d/1BQH-brM8YstpQ4g3MCNbFHwGSZBry39BXTSQ4X6rQQQ/edit?usp=sharing) and get in touch
 via [LINE](https://lin.ee/y01pvKl)
 
 ### Code of Conduct

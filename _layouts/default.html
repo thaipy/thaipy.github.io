@@ -85,37 +85,44 @@
               import asyncio
               from datetime import datetime as dt
               import calendar
-              import json
               from dateutil.relativedelta import relativedelta
-              from dateutil.parser import parse
               from js import console
+              from pyscript import document
               from pyodide.http import pyfetch
-              import datetime, icalendar
+              import datetime
+              import icalendar
 
               now = dt.now().astimezone()
 
               async def get_next_event():
-                  CORS_PROXY = "https://corsproxy.io/?" 
-                  # page = await pyfetch(CORS_PROXY+"https://openrss.org/www.meetup.com/thaipy-bangkok-python-meetup/events/", 
-                  #                    headers={"Accept": "application/rss+xml"}, mode="no-cors")
-                  url = CORS_PROXY+"https://www.meetup.com/thaipy-bangkok-python-meetup/events/ical/"
-                  response = await pyfetch(pyfetch(url, mode="cors"))
+                  CORS_PROXY = "https://corsproxy.io/?"
+                  url = CORS_PROXY + "https://www.meetup.com/thaipy-bangkok-python-meetup/events/ical/"
+                  response = await pyfetch(url, mode="cors")
                   if response.ok:
-                    data = await response.text()
+                      data = await response.text()
                   else:
-                    return None, "Unknown"
-                  # with open("meetup.ical") as f:
-                  #    cal = f.read()
+                      return None, "Unknown"
                   cal = icalendar.Calendar.from_ical(data)
-                  for event in calendar.walk('VEVENT'):
-                      if event.start > now:
-                          nextdate = event.get('dtstart').dt
-                          return nextdate, event.get('summary')
+                  for event in cal.walk('VEVENT'):
+                      event_dt = event.get('dtstart').dt
+                      if hasattr(event_dt, 'astimezone'):
+                          event_dt = event_dt.astimezone()
+                      else:
+                          event_dt = dt.combine(event_dt, datetime.time(18, 30), tzinfo=datetime.timezone(datetime.timedelta(hours=7)))
+                      if event_dt > now:
+                          return event_dt, str(event.get('summary'))
 
               async def get_next_repeat():
-                  next_date = calendar.Calendar(3).monthdatescalendar(now.year, now.month)[3][0]
+                  month = now.month
+                  year = now.year
+                  next_date = calendar.Calendar(3).monthdatescalendar(year, month)[3][0]
                   if next_date < now.date():
-                      next_date = calendar.Calendar(3).monthdatescalendar(now.year, now.month+1)[3][0]
+                      if month == 12:
+                          year += 1
+                          month = 1
+                      else:
+                          month += 1
+                      next_date = calendar.Calendar(3).monthdatescalendar(year, month)[3][0]
                   return (dt(next_date.year, next_date.month, next_date.day, 18, 30, 0, tzinfo=datetime.timezone(datetime.timedelta(hours=7))), "")
 
               def humanise_timedelta(td):
@@ -138,18 +145,16 @@
                   except Exception as e:
                       console.log(str(e))
                       next_date, next_event = await get_next_repeat()
-                  
-                  output_year = f"{next_date.strftime('%a %b %d')}"
-                  Element("newdate").write(output_year)
+
+                  document.querySelector("#newdate").innerText = next_date.strftime('%a %b %d')
                   while True:
                       td = relativedelta(next_date, dt.now().astimezone())
-                      Element("showtime").write("- in " + humanise_timedelta(td))
-                      Element("title").write(next_event)
-  
+                      document.querySelector("#showtime").innerText = "- in " + humanise_timedelta(td)
+                      document.querySelector("#title").innerText = next_event
+
                       await asyncio.sleep(1)
-  
+
               asyncio.ensure_future(main())
-              # Feeds - 
       </script>
         </header>
       <section>
