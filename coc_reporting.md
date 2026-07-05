@@ -1,15 +1,15 @@
 ---
-title: ThaiPys Code of Conduct - Reporting Guide
+title: Only Devs Bangkok Code of Conduct - Reporting Guide
 ---
 
 
-## ThaiPy's Code of Conduct - Reporting Guide
+## Only Devs Bangkok's Code of Conduct - Reporting Guide
 ### Making a report
-If you believe that someone is violating the [code of conduct](/coc) we ask that you report it to by ThaiPy organisers, either in person or via our email contact at [thaipy@dylanjay.com](mailto:thai@gmail.com). **All reports will be kept confidential.** In some cases where we determine that a public statement is required, the identities of all victims and reporters will remain confidential unless those individuals instruct us otherwise.
+If you believe that someone is violating the [code of conduct](/coc) we ask that you report it to by Only Devs Bangkok organisers, either in person or via our email contact at [onlydevsbangkok@dylanjay.com](mailto:onlydevsbangkok@dylanjay.com). **All reports will be kept confidential.** In some cases where we determine that a public statement is required, the identities of all victims and reporters will remain confidential unless those individuals instruct us otherwise.
 
 **If you believe anyone is in physical danger, please notify law enforcement first.**
 
-If you are unsure if the incident is a violation, or whether the space where it occurred is covered by the ThaiPy Code of Conduct, we encourage you to still report it. We believe it is better to discover an incident is not a violation than to not discover a violation. We will not judge you in any way for good faith reporting of an incident that is found to not be a violation. We believe that knowing about incidents that are not violations or occur outside of spaces covered by our code of conduct aid in improving or Code of Conduct and the processes surrounding it.
+If you are unsure if the incident is a violation, or whether the space where it occurred is covered by the Only Devs Bangkok Code of Conduct, we encourage you to still report it. We believe it is better to discover an incident is not a violation than to not discover a violation. We will not judge you in any way for good faith reporting of an incident that is found to not be a violation. We believe that knowing about incidents that are not violations or occur outside of spaces covered by our code of conduct aid in improving or Code of Conduct and the processes surrounding it.
 
 In your report please include:
 * Your contact information, so we can remain in contact with you and followup if required
@@ -21,9 +21,9 @@ In your report please include:
 * Any other information you believe we should have.
 
 ### What happens after you make the report?
-You will receive an email from the organisers of ThaiPys acknowledging receipt immediately. We promise to acknowledge receipt within 24 hours, and aim for much quicker that that.
+You will receive an email from the organisers of Only Devs Bangkok acknowledging receipt immediately. We promise to acknowledge receipt within 24 hours, and aim for much quicker that that.
 
-The Organisers of ThaiPy will immediately meet to review the incident and determine:
+The Organisers of Only Devs Bangkok will immediately meet to review the incident and determine:
 
 * what happened,
 * whether the event constitutes a code of conduct violation,

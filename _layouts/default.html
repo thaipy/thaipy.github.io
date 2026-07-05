@@ -47,9 +47,8 @@
         {% endif %}
 
         {% if site.github.is_user_page %}
-        <p class="view"><a href="https://www.meetup.com/thaipy-bangkok-python-meetup/">Visit our Meetup Page</a><br />
+        <p class="view"><a href="https://www.meetup.com/only_devs_bangkok/">Visit our Meetup Page</a><br />
           <a href="https://lin.ee/y01pvKl ">Contact us via LINE</a><br />
-          <!-- <a href="https://www.redbubble.com/people/ThaiPy/shop">Get some ThaiPy Swag</a></p> -->
         {% endif %}
 
         {% if site.show_downloads %}
@@ -67,9 +66,9 @@
             <span id="title"></span>
             <span id="showtime"></span>
           </strong>
-          - 
-          <a href="https://www.meetup.com/thaipy-bangkok-python-meetup/">Join Us</a>
-          <a href="https://www.meetup.com/thaipy-bangkok-python-meetup/">RSVP</a>
+          -
+          <a href="https://www.meetup.com/only_devs_bangkok/">Join Us</a>
+          <a href="https://www.meetup.com/only_devs_bangkok/">RSVP</a>
         </p>
 
         <py-config>
@@ -96,7 +95,7 @@
 
               async def get_next_event():
                   CORS_PROXY = "https://corsproxy.io/?"
-                  url = CORS_PROXY + "https://www.meetup.com/thaipy-bangkok-python-meetup/events/ical/"
+                  url = CORS_PROXY + "https://www.meetup.com/only_devs_bangkok/events/ical/"
                   response = await pyfetch(url, mode="cors")
                   if response.ok:
                       data = await response.text()
